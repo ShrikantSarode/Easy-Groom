@@ -1,14 +1,21 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css"; // Ensure Bootstrap is included
 
 export default function Dashboard() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const navigate = useNavigate();
 
   // Toggle the sidebar's visibility
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
+
+  const handleLogout = () => {
+    localStorage.removeItem("authToken");
+    navigate("/"); // Navigate to the home page
+  };
+  
 
   const [todos] = useState([
     {
@@ -103,17 +110,17 @@ export default function Dashboard() {
             </div>
             <div className="col-xl-6 text-end pe-5">
               {/* Logout Button */}
-              <button className="btn btn-outline-warning ms-3">Logout</button>
+              <button className="btn btn-outline-warning ms-3" onClick={handleLogout()}>Logout</button>
             </div>
           </div>
 
           {/* Main Dashboard Content */}
           <div className="row mt-4">
             <div className="col-xl-6">
-              <h4>Staff Dashboard</h4>
+              <h4 style={{fontSize:"30px"}}>Staff Dashboard</h4>
             </div>
             <div className="col-xl-6 text-end pe-5">
-              <input type="date" name="" id="" />
+              <input type="date" name="" id="" className="p-2" />
             </div>
           </div>
 

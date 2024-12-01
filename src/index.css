@@ -1,13 +1,177 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+}
+/* login */
+/* General body and page layout */
+/* body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f7fc;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+} */
+
+.login-form {
+  width: 100%;
+  max-width: 400px;
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #666;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #333;
+  background-color: #fafafa;
+  transition: border-color 0.3s ease;
+}
+
+.input-group input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.error-message {
+  color: #ff4d4d;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 14px;
+  background-color: #ffc400;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #000000;
+}
+
+.forgot-password {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.forgot-password a {
+  color: #ffc400;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.forgot-password a:hover {
+  text-decoration: underline;
+  color: #000000;
+}
+
+.forgot-password .mt-3 {
+  display: block;
+  margin-top: 20px;
+}
+
+.forgot-password .mt-3 a {
+  font-size: 14px;
+  color: #666;
+}
+
+.forgot-password .mt-3 a:hover {
+  color: #000000;
+}
+.heading-1{
+  font-size: 50px;
+}
+ /* nav */
+ /* General styling for the nav container */
+.nav-tabs {
+  background-color: #f8f9fa; /* Light background for a clean, modern look */
+  border-bottom: 2px solid #e0e0e0; /* Soft border at the bottom */
+  margin: 0;
+  padding: 10px 20px;
+  border-radius: 8px; /* Rounded corners for a softer look */
+}
+
+.nav-item {
+  margin-left: 20px; /* Space between menu items */
+}
+
+.nav-link {
+  font-size: 20px !important; /* Larger text for readability */
+  color: #333 !important; /* Dark text for good contrast */
+  font-weight: 500; /* Slightly bold text for emphasis */
+  padding: 10px 15px; /* More padding for a better click/tap area */
+  border-radius: 8px; /* Rounded corners for the links */
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  background-color: #ffc400; /* Blue background on hover */
+  color: white; /* White text on hover */
+  text-decoration: none; /* Remove underline on hover */
+}
+
+.nav-tabs .nav-link.active {
+  background-color: #ffc400; /* Highlight active tab */
+  color: white; /* White text on active tab */
+  border-radius: 8px; /* Match the rounded style */
+}
+
+ 
+
+@media (max-width: 767px) {
+  .nav-tabs {
+    flex-direction: column; /* Stack items vertically on small screens */
+    text-align: center; /* Center align items on mobile */
+  }
+  
+  .nav-item {
+    margin-left: 0;
+    margin-bottom: 10px; /* Space between stacked items */
+  }
+
+  .nav-link {
+    padding: 12px 20px; /* Larger clickable area for smaller devices */
+  }
+}
+.role-selection {
+  margin-bottom: 20px;
+}
+
+.role-selection label {
+  margin-right: 15px;
 }

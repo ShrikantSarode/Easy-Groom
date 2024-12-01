@@ -5,6 +5,7 @@ import Login from "./Components/Login";
 import Home from "./Components/Home";
 import SignUp from "./Components/SignUp";
 import AdminLogin from "./Components/AdminLogin";
+import StaffLogin from "./Components/StaffLogin";
 
 const projectRouter = createBrowserRouter([
   {
@@ -26,6 +27,10 @@ const projectRouter = createBrowserRouter([
       {
         path: "/admin-login",
         element: <AdminLogin/>,
+      },
+      {
+        path: "/staff-login",
+        element: <StaffLogin/>,
       },
     ],
   },

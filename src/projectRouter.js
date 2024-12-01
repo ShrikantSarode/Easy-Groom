@@ -6,6 +6,8 @@ import Home from "./Components/Home";
 import SignUp from "./Components/SignUp";
 import AdminLogin from "./Components/AdminLogin";
 import StaffLogin from "./Components/StaffLogin";
+import Dashboard from "./Components/Staff/Dashboard";
+import AppointmentStaff from "./Components/Staff/AppointmentStaff";
 
 const projectRouter = createBrowserRouter([
   {
@@ -14,23 +16,35 @@ const projectRouter = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home/>,
+        element: <Home />,
       },
       {
         path: "/login",
-        element: <Login/>,
+        element: <Login />,
       },
       {
         path: "/signup",
-        element: <SignUp/>,
+        element: <SignUp />,
       },
       {
         path: "/admin-login",
-        element: <AdminLogin/>,
+        element: <AdminLogin />,
       },
       {
         path: "/staff-login",
-        element: <StaffLogin/>,
+        element: <StaffLogin />,
+      },
+      {
+        path: "/staff-dashboard",
+        element: <Dashboard />,
+      },
+      {
+        path: "/staff-profile",
+        element: <Dashboard />,
+      },
+      {
+        path: "/staff-appointments",
+        element: <AppointmentStaff />,
       },
     ],
   },

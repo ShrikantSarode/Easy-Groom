@@ -1,26 +1,23 @@
-import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 const StaffLogin = () => {
   // State to store the form data
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
   const navigate = useNavigate(); // Hook for navigation
 
   // Handle form submission
   const handleLogin = (e) => {
     e.preventDefault();
-    if (email === '' || password === '') {
-      setError('Please fill in all fields.');
+    if (email === "" || password === "") {
+      setError("Please fill in all fields.");
       return;
     }
 
-    // Placeholder logic for staff login
-    console.log('Staff login submitted', { email, password });
-
     // Navigate to the staff dashboard or home page after successful login (placeholder)
-    navigate('/staff-dashboard');
+    navigate("/staff-dashboard");
   };
 
   // Handle the change in email and password inputs
